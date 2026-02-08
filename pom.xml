@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>AppiumDemoFramework</artifactId>
+    <artifactId>SugarFitAutomationFramework</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
