@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MobileAppSuite">
+    <parameter name="platform" value="android"/>
+    <parameter name="deviceName" value="adb-79ay6l5hkv65ugyx-FsmUzf._adb-tls-connect._tcp"/>
+    <parameter name="appFileName" value=""/>
+    <parameter name="appPackage" value="fit.sugar.android"/>
+    <parameter name="appActivity" value="fit.cure.android.MainActivity"/>
+    <parameter name="platformVersion" value="13"/>
+    <test name="AndroidTest">
+        <classes>
+            <class name="runner.TestRunnerAndroid"/>
+        </classes>
+    </test>
+
+    <listeners>
+        <listener class-name="Utility.RetryListener"/>
+    </listeners>
+
+</suite>
