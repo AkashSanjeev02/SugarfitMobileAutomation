@@ -29,11 +29,6 @@ public class LoginSteps extends BaseClass {
         loginScreen.verifyThePresenceOfLoginScreen();
     }
 
-//    @Then("Verify the average app load time is within acceptable limits")
-//    public void verify_the_average_app_load_time_is_within_acceptable_limits() {
-//
-//    }
-
     @Given("Launch the sugar.fit application and Verify the login screen is displayed")
     public void launch_the_sugar_fit_application_and_Verify_the_login_screen_is_displayed() {
         launch_the_sugar_fit_application();
@@ -77,5 +72,10 @@ public class LoginSteps extends BaseClass {
       loginScreen.clickSendVerificationCodeButton();
     }
 
+    @Then("Verify error message {string} is displayed")
+    public void verify_error_message_is_displayed(String ErrorMessage) {
+        String actualErrorMessage = loginScreen.getErrorMessage();
+        Assert.assertEquals(actualErrorMessage, ErrorMessage, "Error message does not match expected value.");
+    }
 
 }
