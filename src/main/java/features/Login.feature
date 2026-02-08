@@ -16,7 +16,7 @@ Feature: Login functionality
 
     Examples:
       | phoneNumber | otp    |
-      | 8197471517  | 132465 |
+      | 8197471516  | 132465 |
 
   @login-failure
   Scenario Outline: TC003 - Verify login fails with invalid credentials
@@ -28,5 +28,5 @@ Feature: Login functionality
     Then Verify error message "<errorMessage>" is displayed
 
     Examples:
-      | phoneNumber | otp    | errorMessage |
-      | 8197471516  | 000000 | Invalid OTP  |
+      | phoneNumber | otp    | errorMessage            |
+      | 8197471516  | 000000 | Otp Verification Failed |

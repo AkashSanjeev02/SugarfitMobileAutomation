@@ -25,7 +25,7 @@ public class LoginScreen extends BaseClass {
         genericUtility.initPageElements(this);
     }
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc=\"PHONE_NUMBER_INPUT\"]")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@content-desc=\"PHONE_NUMBER0_INPUT\"]")
     private WebElement phoneNumberField;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='Send Verification Code']")

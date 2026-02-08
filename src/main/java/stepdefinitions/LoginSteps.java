@@ -7,7 +7,6 @@ import org.base.BaseClass;
 import pagefactory.EnterOtpScreen;
 import pagefactory.HomeScreen;
 import pagefactory.LoginScreen;
-import org.testng.Assert;
 
 public class LoginSteps extends BaseClass {
 
@@ -17,15 +16,12 @@ public class LoginSteps extends BaseClass {
 
     @Given("Launch the sugar.fit application")
     public void launch_the_sugar_fit_application() {
-        // Initialize the LoginScreen page object
         loginScreen = new LoginScreen(getDriver());
-        // Verify that the app has launched by checking for a key element on the login screen
         loginScreen.verifyThePresenceOfLoginScreen();
     }
 
     @When("Verify the login screen is displayed")
     public void verify_the_login_screen_is_displayed() {
-        // This step is already covered in the previous step, but we can add an additional assertion here if needed
         loginScreen.verifyThePresenceOfLoginScreen();
     }
 
@@ -43,16 +39,6 @@ public class LoginSteps extends BaseClass {
     @When("Enter OTP {string}")
     public void enter_OTP(String OTP) {
         enterOtpScreen.enterOTP(OTP);
-    }
-
-    @When("Click the login button")
-    public void click_the_login_button() {
-
-    }
-
-    @Then("Verify the user is redirected to HomeScreen")
-    public void verify_the_user_is_redirected_to_HomeScreen() {
-
     }
 
     @When("Verify the presence of Enter OTP screen")
@@ -74,8 +60,7 @@ public class LoginSteps extends BaseClass {
 
     @Then("Verify error message {string} is displayed")
     public void verify_error_message_is_displayed(String ErrorMessage) {
-        String actualErrorMessage = loginScreen.getErrorMessage();
-        Assert.assertEquals(actualErrorMessage, ErrorMessage, "Error message does not match expected value.");
+        homeScreen.verifyOtpVerificationFailedMessage(ErrorMessage);
     }
 
 }

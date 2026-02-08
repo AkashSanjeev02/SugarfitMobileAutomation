@@ -13,7 +13,7 @@
     </test>
 
     <listeners>
-        <listener class-name="Utility.RetryListener"/>
+        <listener class-name="Utility.RetryAnalyzer"/>
     </listeners>
 
 </suite>
