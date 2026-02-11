@@ -12,8 +12,8 @@
         </classes>
     </test>
 
-    <listeners>
-        <listener class-name="Utility.RetryAnalyzer"/>
-    </listeners>
+<!--    <listeners>-->
+<!--        <listener class-name="Listeners.RetryAnalyzer"/>-->
+<!--    </listeners>-->
 
 </suite>

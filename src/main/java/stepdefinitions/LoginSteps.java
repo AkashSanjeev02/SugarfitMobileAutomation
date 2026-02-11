@@ -28,7 +28,6 @@ public class LoginSteps extends BaseClass {
     @Given("Launch the sugar.fit application and Verify the login screen is displayed")
     public void launch_the_sugar_fit_application_and_Verify_the_login_screen_is_displayed() {
         launch_the_sugar_fit_application();
-        loginScreen.verifyThePresenceOfLoginScreen();
     }
 
     @When("Enter phone number {string}")

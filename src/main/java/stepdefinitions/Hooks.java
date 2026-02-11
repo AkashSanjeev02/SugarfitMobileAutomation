@@ -9,15 +9,10 @@ import java.net.MalformedURLException;
 
 public class Hooks extends BaseClass {
 
-//    @Before
-//    public void cucumberBefore(Scenario scenario) throws MalformedURLException {
-//        System.out.println("Starting Scenario: " + scenario.getName());
-//        androidRealDeviceFromXML();
-//    }
-
     @Before
-    public void cucumberBefore(Scenario scenario) {
-        System.out.println(" Starting Scenario: " + scenario.getName());
+    public void cucumberBefore(Scenario scenario) throws MalformedURLException {
+        System.out.println("Starting Scenario: " + scenario.getName());
+        androidRealDeviceFromXML();
     }
 
     @After
